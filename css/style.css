@@ -21,13 +21,7 @@ body {
     background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) {
-    body {
-        background-image: url('/imagens/backgroundMobile.png');
-        background-position: top center;
-        background-size: 100% auto;
-    }
-}
+
 
 .paiDeTodos{
     display: flex;
@@ -36,77 +30,77 @@ body {
     padding: 0px;
 }
 
-@media (max-width: 768px) {
-    .paiDeTodos {
-        width: 100%;
-        overflow-x: hidden;
-    }
 
-    /* Ajuste para as imagens dos projetos */
-    .Meus-projetos img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Ajuste para os cards de projeto */
-    .project {
-        margin: 20px 10px;
-        width: calc(100% - 20px);
-        max-width: none;
-    }
-
-    .meioOutros {
-        padding: 0 10px;
-    }
-
-    /* Ajuste para o slider */
-    .slider {
-        min-height: auto;
-        padding: 20px;
-        gap: 15px;
-    }
-
-    .container-images {
-        width: 240px;
-        height: 150px;
-    }
-
-    .imagensSenai {
-        width: 240px;
-        height: 150px;
-    }
-
-    /* Ajuste dos botões de navegação */
-    .arrowSenai {
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        background-color: rgba(46, 46, 46, 0.8);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-
-    .arrowSenai:first-child {
-        left: 10px;
-    }
-
-    .arrowSenai:last-child {
-        right: 10px;
-    }
-
-    .setasvg {
-        width: 20px;
-        height: 20px;
-    }
-}
 
 /* Pagina */
+
+
+.slider{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    background: var(--novo, linear-gradient(180deg, #303030 0%, rgba(30, 30, 30, 0.00) 100%));
+}
+
+.container-images{
+    max-width: 867px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagensSenai.on{
+    opacity: 1;
+    display: block;
+    box-shadow: 2px 2px 10px rgba(26, 26, 26, 0.5);
+}
+
+.imagensSenai {
+    width: 870px;
+    height: 540px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    
+}
+
+.arrowSenai {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.arrowSenai:first-child {
+    left: 10px;
+}
+
+.arrowSenai:last-child {
+    right: 10px;
+}
+
+.setasvg{
+    width: 20px;
+    height: 20px;
+}
+
+
 
 /* Header */
 
@@ -125,184 +119,7 @@ header {
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px;
-        height: 50px;
-        position: fixed;
-    }
 
-    header .logo {
-        margin: 0;
-    }
-
-    header .logo img {
-        height: 25px;
-    }
-
-    /* Esconder navegação por padrão */
-    header nav {
-        display: none;
-    }
-
-    /* Hero section mobile */
-    .hero {
-        margin-top: 60px;
-    }
-
-    /* Sobre mim mobile */
-    .sobre-mim {
-        padding: 20px;
-    }
-
-    .sobre-mim h2 {
-        font-size: 24px;
-        padding-left: 0;
-        margin-bottom: 20px;
-    }
-
-    .sobre-mim p {
-        font-size: 16px;
-        padding-left: 0;
-        color: #CFCFCF;
-    }
-
-    .skills {
-        padding-left: 0;
-        justify-content: flex-start;
-        gap: 20px;
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-
-    /* Projetos mobile */
-    .title-container {
-        padding-left: 20px;
-    }
-
-    .title-container h2 {
-        font-size: 24px;
-    }
-
-    .Meus-projetos {
-        padding: 0;
-    }
-
-    /* Card de projeto mobile */
-    .robotic-search {
-        padding: 20px;
-        gap: 30px;
-    }
-
-    .titulo-info {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .titulo-info h2 {
-        font-size: 20px;
-    }
-
-    .btn {
-        width: 100%;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    /* Slider mobile */
-    
-
-    .arrowSenai {
-        width: 30px;
-    }
-
-    /* Outros projetos mobile */
-    .Outros {
-        background-image: url('/imagens/backgroundMobile.png');
-    }
-
-    .project {
-        width: 282px; /* Mantém a largura fixa para mobile */
-        height: 420px; /* Aumenta a altura para acomodar todo o conteúdo */
-        margin: 10px 0;
-        box-sizing: border-box;
-    }
-
-    .project img {
-        width: 100%;
-        height: 149px;
-        object-fit: cover;
-    }
-
-    /* Ajustes do conteúdo dentro do card */
-    .project-description {
-        padding: 15px;
-        margin: 0;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1;
-    }
-
-    .project-description h3 {
-        font-size: 16px;
-        padding-bottom: 8px;
-    }
-
-    .project-description p {
-        font-size: 12px;
-        line-height: 1.4;
-        margin-bottom: 10px;
-    }
-
-    .button-wrapper {
-        margin-top: auto; /* Empurra o botão para baixo */
-        margin-bottom: 15px;
-        padding: 0 15px;
-    }
-
-    .view-prototype {
-        font-size: 14px;
-        padding: 8px 16px;
-        width: 100%;
-    }
-
-    /* Contato mobile */
-    .contato-section {
-        padding: 20px;
-        background-size: cover;
-    }
-
-    .contato-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    .contact-item img {
-        width: 40px;
-        height: 40px;
-        padding: 8px;
-    }
-
-    .contact-item p {
-        font-size: 12px;
-    }
-
-    /* Footer mobile */
-    footer {
-        padding: 15px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        text-align: center;
-    }
-}
 
 header .logo {
     margin: 140px;
@@ -362,11 +179,7 @@ header nav a:hover {
     margin-top: 50px;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        margin-top: 60px;
-    }
-}
+
 
 .hero img {
     width: 100%; /* Ajusta a largura para não ultrapassar a tela */
@@ -431,31 +244,7 @@ header nav a:hover {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .sobre-mim h2 {
-        font-size: 24px;
-        padding-left: 0;
-        margin-bottom: 20px;
-    }
 
-    .sobre-mim p {
-        font-size: 16px;
-        padding-left: 0;
-        color: #CFCFCF;
-    }
-
-    .skills {
-        padding-left: 0;
-        justify-content: flex-start;
-        gap: 20px;
-        overflow-x: auto;
-        padding-bottom: 10px;
-    }
-
-    .sobre-mim {
-        padding: 20px;
-    }
-}
 
 /* Define o estilo para os parágrafos dentro da seção "Sobre Mim" */
 .sobre-mim p {
@@ -952,24 +741,8 @@ hr {
 }
 
 
-.slider{
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-    background: var(--novo, linear-gradient(180deg, #303030 0%, rgba(30, 30, 30, 0.00) 100%));
-}
 
-@media (max-width: 768px) {
-    .robotic-search {
-        padding-left: 5%;
-        padding-right: 5%;
-    }
-}
+
 
 
 
@@ -1311,16 +1084,7 @@ hr {
     padding: 0 20px;
 }
 
-@media (max-width: 768px) {
-    .contato-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
 
-    .contato-section h2 {
-        font-size: 36px;
-    }
-}
 
 @media (max-width: 480px) {
     .contato-grid {
@@ -1448,7 +1212,426 @@ footer {
     cursor: pointer;
 }
 
+/* 11. Media Queries - Todas juntas */
 @media (max-width: 768px) {
+
+    body {
+        background-image: url('/imagens/backgroundMobile.png');
+        background-position: top center;
+        background-size: 100% auto;
+    }
+
+    .paiDeTodos {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Ajuste para as imagens dos projetos */
+    .Meus-projetos img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste para os cards de projeto */
+    .project {
+        margin: 20px 10px;
+        width: calc(100% - 20px);
+        max-width: none;
+    }
+
+    .meioOutros {
+        padding: 0 10px;
+    }
+
+ 
+    .container-images {
+        width: 240px;
+        height: 150px;
+    }
+
+    .imagensSenai {
+        width: 240px;
+        height: 150px;
+    }
+
+    /* Ajuste dos botões de navegação */
+    .arrowSenai {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background-color: rgba(46, 46, 46, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .arrowSenai:first-child {
+        left: 10px;
+    }
+
+    .arrowSenai:last-child {
+        right: 10px;
+    }
+
+    .setasvg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slider {
+        min-height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .container-images {
+        width: 240px;
+        height: 150px;
+    }
+
+    
+
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+        height: 50px;
+        position: fixed;
+    }
+
+    header .logo {
+        margin: 0;
+    }
+
+    header .logo img {
+        height: 25px;
+    }
+
+    /* Esconder navegação por padrão */
+    header nav {
+        display: none;
+    }
+
+    /* Hero section mobile */
+    .hero {
+        margin-top: 60px;
+    }
+
+    /* Sobre mim mobile */
+    .sobre-mim {
+        padding: 20px;
+    }
+
+    .sobre-mim h2 {
+        font-size: 24px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .sobre-mim p {
+        font-size: 16px;
+        padding-left: 0;
+        color: #CFCFCF;
+    }
+
+    .skills {
+        padding-left: 0;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    /* Projetos mobile */
+    .title-container {
+        padding-left: 20px;
+    }
+
+    .title-container h2 {
+        font-size: 24px;
+    }
+
+    .Meus-projetos {
+        padding: 0;
+    }
+
+    /* Card de projeto mobile */
+    .robotic-search {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .titulo-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titulo-info h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    
+
+    .arrowSenai {
+        width: 30px;
+    }
+
+    /* Outros projetos mobile */
+    .Outros {
+        background-image: url('/imagens/backgroundMobile.png');
+    }
+
+    .project {
+        width: 282px; /* Mantém a largura fixa para mobile */
+        height: 420px; /* Aumenta a altura para acomodar todo o conteúdo */
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .project img {
+        width: 100%;
+        height: 149px;
+        object-fit: cover;
+    }
+
+    /* Ajustes do conteúdo dentro do card */
+    .project-description {
+        padding: 15px;
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .project-description h3 {
+        font-size: 16px;
+        padding-bottom: 8px;
+    }
+
+    .project-description p {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .button-wrapper {
+        margin-top: auto; /* Empurra o botão para baixo */
+        margin-bottom: 15px;
+        padding: 0 15px;
+    }
+
+    .view-prototype {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    /* Contato mobile */
+    .contato-section {
+        padding: 20px;
+        background-size: cover;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .contact-item img {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .contact-item p {
+        font-size: 12px;
+    }
+
+    /* Footer mobile */
+    footer {
+        padding: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .hero {
+        margin-top: 60px;
+    }
+
+    .sobre-mim h2 {
+        font-size: 24px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .sobre-mim p {
+        font-size: 16px;
+        padding-left: 0;
+        color: #CFCFCF;
+    }
+
+    .skills {
+        padding-left: 0;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .sobre-mim {
+        padding: 20px;
+    }
+
+    .robotic-search {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contato-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .contato-section h2 {
+        font-size: 36px;
+    }
+    /* Estilos globais mobile */
+    body {
+        background-image: url('/imagens/backgroundMobile.png');
+        background-position: top center;
+        background-size: 100% auto;
+    }
+
+    .paiDeTodos {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Header mobile */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+        height: 50px;
+        position: fixed;
+    }
+
+    header .logo {
+        margin: 0;
+    }
+
+    header .logo img {
+        height: 25px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* Hero mobile */
+    .hero {
+        margin-top: 60px;
+    }
+
+    /* Sobre mim mobile */
+    .sobre-mim {
+        padding: 20px;
+    }
+
+    /* ... continue com todos os estilos mobile ... */
+
+    /* Menu hamburger */
+    .menu-hamburger {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    
+    .slider {
+        min-height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .container-images {
+        width: 240px;
+        height: 150px;
+    }
+
+ 
+    .Outros {
+        background-image: url('/imagens/OutroBackgroundMobile.png');
+        padding: 20px;
+        max-height: none;
+    }
+
+    .meioOutros {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .project {
+        width: min(calc(100% - 40px), 350px); /* Largura flexível com mínimo implícito */
+        min-width: 282px; /* Largura mínima */
+        height: 420px;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    .project img {
+        width: 100%;
+        height: 149px;
+        object-fit: cover;
+    }
+
+    /* Ajustes do conteúdo dentro do card */
+    .project-description {
+        padding: 15px;
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .button-wrapper {
+        margin-top: auto;
+        margin-bottom: 15px;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .view-prototype {
+        width: 100%;
+        max-width: none;
+    }
     .menu-hamburger {
         width: 24px;
         height: 24px;
@@ -1570,144 +1753,61 @@ footer {
     .info-tooltip p {
         font-size: 12px;
     }
-}
-
-@media (max-width: 768px) {
-    /* Ajustes para a seção Outros em mobile */
-    .Outros {
-        background-image: url('/imagens/OutroBackgroundMobile.png');
-        padding: 20px;
-        max-height: none;
-    }
-
-    .meioOutros {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
-    .project {
-        width: min(calc(100% - 40px), 350px); /* Largura flexível com mínimo implícito */
-        min-width: 282px; /* Largura mínima */
-        height: 420px;
-        margin: 10px auto;
-        box-sizing: border-box;
-    }
-
-    .project img {
-        width: 100%;
-        height: 149px;
-        object-fit: cover;
-    }
-
-    /* Ajustes do conteúdo dentro do card */
-    .project-description {
-        padding: 15px;
-        margin: 0;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1;
-    }
-
-    .button-wrapper {
-        margin-top: auto;
-        margin-bottom: 15px;
-        padding: 0 15px;
-        width: 100%;
-    }
-
-    .view-prototype {
-        width: 100%;
-        max-width: none;
-    }
-}
-
-/* Slider */
-.slider {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-    background: var(--novo, linear-gradient(180deg, #303030 0%, rgba(30, 30, 30, 0.00) 100%));
-}
-
-.container-images {
-    width: 240px;
-    height: 150px;
-    position: relative;
-    overflow: hidden;
-}
-
-.imagensSenai {
-    width: 240px;
-    height: 150px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-    display: none;
-}
-
-.imagensSenai.on {
-    opacity: 1;
-    display: block;
-    box-shadow: 2px 2px 10px rgba(26, 26, 26, 0.5);
-}
-
-/* Botões de navegação */
-.arrowSenai {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-    background-color: rgba(46, 46, 46, 0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-}
-
-.arrowSenai:first-child {
-    left: 10px;
-}
-
-.arrowSenai:last-child {
-    right: 10px;
-}
-
-.setasvg {
-    width: 20px;
-    height: 20px;
-}
-
-@media (max-width: 768px) {
-    .slider {
-        min-height: auto;
-        padding: 20px;
-        gap: 15px;
-    }
-
     .container-images {
         width: 240px;
         height: 150px;
+        position: relative;
+        overflow: hidden;
     }
-
+    
     .imagensSenai {
         width: 240px;
         height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+        display: none;
+    }
+    
+    .imagensSenai.on {
+        opacity: 1;
+        display: block;
+        box-shadow: 2px 2px 10px rgba(26, 26, 26, 0.5);
+    }
+    
+    /* Botões de navegação */
+    .arrowSenai {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background-color: rgba(46, 46, 46, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+    }
+    
+    .arrowSenai:first-child {
+        left: 10px;
+    }
+    
+    .arrowSenai:last-child {
+        right: 10px;
+    }
+    
+    .setasvg {
+        width: 20px;
+        height: 20px;
     }
 }
+
+
+
+
