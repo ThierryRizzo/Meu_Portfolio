@@ -225,9 +225,7 @@ header nav a:hover {
     border-color: #FF6F00;
 }
 
-/* Body */
 
-/* Sobre-mim */
 
 .sobre-mim {
     font-family: 'Montserrat', sans-serif;
@@ -235,11 +233,12 @@ header nav a:hover {
     color: white;
     text-align: left;
     padding-top: 50px;
-    padding-left: 10%;
+    padding-left: 7.8%;
     padding-right: 10%;
+    padding-bottom: 3%;
 }
 
-/* Define o estilo para o título "Sobre Mim" */
+
 .sobre-mim h2 {
     font-size: 2em;
     margin-bottom: 37px;
@@ -257,7 +256,7 @@ header nav a:hover {
 
 
 
-/* Define o estilo para os parágrafos dentro da seção "Sobre Mim" */
+
 .sobre-mim p {
     font-family: 'Open Sans', sans-serif;
     max-width: 772px;
@@ -304,9 +303,7 @@ header nav a:hover {
     transform: translateX(-10px); /* Move o ícone à esquerda 10px para a esquerda */
 }
 
-/* Sobre-mim */
 
-/* Projetos */
 
 .title-container {
     text-align: left;
@@ -336,25 +333,21 @@ header nav a:hover {
 }
 
 
-/* Robotic Search Section */
 
-/* Aplica os mesmos estilos de fontes e espaçamentos do "Sobre Mim" */
-
-/* Estilo para a seção de Títulos */
 .title-container h2 {
     font-size: 48px;
-    font-weight: 700; /* Bold */
+    font-weight: 700; 
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
-    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+    transition: color 0.3s ease; 
 }
 
-/* Estilo ao passar o mouse sobre o título "Meus Projetos" */
+
 .title-container h2:hover {
-    color: #F76C00; /* Muda a cor para laranja ao passar o mouse */
+    color: #F76C00; 
 }
 
-/* Ajuste da estrutura geral */
+
 .robotic-search {
     display: flex;
     font-family: 'Open Sans', sans-serif;
@@ -416,21 +409,21 @@ hr {
 
 .robotic-search h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 36px; /* Mesma fonte e tamanho do "Sobre Mim" */
+    font-size: 36px; 
     color: white;
     margin-bottom: 10px;
-    transition: color 0.3s ease; /* Efeito hover */
+    transition: color 0.3s ease; 
 }
 
-/* Efeito hover para o título */
+
 .robotic-search h2:hover {
-    color: #F76C00; /* Cor laranja no hover */
+    color: #F76C00; 
 }
 
 
 
 
-/* Habilidades */
+
 .robotic-search .skills {
     display: flex;
     justify-content: left;
@@ -441,7 +434,7 @@ hr {
     width: 100%;
 }
 
-/* Estilo básico dos ícones */
+
 .robotic-search .skills img {
     width: 40px;
     transition: transform 0.3s ease, width 0.3s ease;
@@ -454,7 +447,7 @@ hr {
 
 
 
-/* Estilizando o texto "Minhas Contribuições" */
+
 .robotic-search h4 {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -472,7 +465,7 @@ hr {
 
 
 
-/* Formatação dos parágrafos e listas */
+
 .robotic-search p{
     font-family: 'Open Sans', sans-serif;
     max-width: 1080px;
@@ -496,7 +489,7 @@ hr {
 
 
   
-/* Problema Robotic */
+
 
   .problemaRobotic {
     background: none;
@@ -514,30 +507,27 @@ hr {
   }
   
   .arrow1 {
-    transition: transform 0.6s; /* Animação para a seta */
+    transition: transform 0.6s; 
   }
   
   .arrow1.open {
-    transform: rotate(180deg); /* Rotaciona a seta quando aberta */
+    transform: rotate(180deg); 
   }
 
   .hidden-problema-robotic {
     opacity: 0;
     max-height: 0;
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa o max-height */
-    transition: opacity 1s ease-in-out, max-height 1s ease-in-out; /* Transição suave de 1 segundo para opacidade e max-height */
+    overflow: hidden; 
+    transition: opacity 1s ease-in-out, max-height 1s ease-in-out; 
 }
 
-/* Estado dos containers quando devem ser visíveis */
+
 .hidden-problema-robotic.show {
     opacity: 1;
-    max-height: 1150px; /* Valor alto para garantir que o conteúdo possa ser exibido completamente */
+    max-height: 1150px; 
 }
 
 
-
-
-/* Pesquisa Robotic */
 
 
 .pesquisaRobotic {
@@ -556,24 +546,24 @@ hr {
   }
   
   .arrow2 {
-    transition: transform 0.6s; /* Animação para a seta */
+    transition: transform 0.6s; 
   }
   
   .arrow2.open {
-    transform: rotate(180deg); /* Rotaciona a seta quando aberta */
+    transform: rotate(180deg); 
   }
 
   .hidden-pesquisa-robotic {
     opacity: 0;
     max-height: 0;
-    overflow: hidden; /* Esconde o conteúdo que ultrapassa o max-height */
-    transition: opacity 1s ease-in-out, max-height 1s ease-in-out; /* Transição suave de 1 segundo para opacidade e max-height */
+    overflow: hidden; 
+    transition: opacity 1s ease-in-out, max-height 1s ease-in-out; 
 }
 
-/* Estado dos containers quando devem ser visíveis */
+
 .hidden-pesquisa-robotic.show {
     opacity: 1;
-    max-height: 1150px; /* Valor alto para garantir que o conteúdo possa ser exibido completamente */
+    max-height: 1150px; 
 }
 
 
@@ -1226,6 +1216,12 @@ footer {
 /* 11. Media Queries - Todas juntas */
 @media (max-width: 768px) {
 
+
+    .titulo-info hr{
+        
+        width: 195px;
+    }
+
     body {
         background-image: url('/imagens/backgroundMobile.png');
         background-position: top center;
@@ -1325,7 +1321,7 @@ footer {
         margin-top: 60px;
     }
 
-    /* Sobre mim mobile */
+    
     .sobre-mim {
         padding: 20px;
     }
@@ -1348,6 +1344,19 @@ footer {
         gap: 20px;
         overflow-x: auto;
         padding-bottom: 10px;
+    }
+
+    .titulo-info .skills {
+        padding-left: 0;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .titulo-info .skills img {
+        width: 25px;
+        height: 25px;
     }
 
     /* Projetos mobile */
@@ -1490,14 +1499,6 @@ footer {
         font-size: 16px;
         padding-left: 0;
         color: #CFCFCF;
-    }
-
-    .skills {
-        padding-left: 0;
-        justify-content: flex-start;
-        gap: 20px;
-        overflow-x: auto;
-        padding-bottom: 10px;
     }
 
     .sobre-mim {
@@ -1670,14 +1671,11 @@ footer {
         padding: 8px 16px;
     }
 
-    /* Skills */
-    .skills img {
-        width: 30px;
-        height: 30px;
-    }
+
 
     #kotlinImg {
         width: 60px;
+        height: 15px;
     }
 
     /* Projetos */
@@ -1694,7 +1692,7 @@ footer {
     .problemaSenai,
     .pesquisaSenai,
     .resultadoSenai {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     /* Cards de projeto */
@@ -1719,7 +1717,7 @@ footer {
     }
 
     .contact-item p {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     /* Footer */
@@ -1728,7 +1726,7 @@ footer {
     }
 
     .footer-content .copyright-text {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .footer-logo img {
