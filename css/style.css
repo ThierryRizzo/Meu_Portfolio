@@ -13,9 +13,116 @@ body {
     background-color: #181818;
     color: white;
     background-image: url('/imagens/Background-img.png');
-    background-size: cover; /* Ajusta a imagem de fundo para cobrir a área */
-    background-position: center -50px; /* Ajusta a posição da imagem para subir mais */
+    background-size: cover;
+    background-position: center -50px;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url('/imagens/backgroundMobile.png');
+        background-position: top center;
+        background-size: 100% auto;
+    }
+}
+
+.paiDeTodos{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+@media (max-width: 768px) {
+    .paiDeTodos {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Ajuste para as imagens dos projetos */
+    .Meus-projetos img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste para os cards de projeto */
+    .project {
+        margin: 20px 10px;
+        width: calc(100% - 20px);
+        max-width: none;
+    }
+
+    .meioOutros {
+        padding: 0 10px;
+    }
+
+    /* Ajuste para o slider */
+    .slider {
+        min-height: auto;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--novo, linear-gradient(180deg, #303030 0%, rgba(30, 30, 30, 0.00) 100%));
+    }
+
+    .container-images {
+        width: 240px;
+        height: 150px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagensSenai {
+        width: 240px;
+        height: 150px;
+        position: absolute;
+        opacity: 0;
+        transition-duration: 0.8s;
+        
+    }
+
+    .imagensSenai.on {
+        display: block;
+        opacity: 1;
+        position: relative;
+        box-shadow: 2px 2px 10px rgba(26, 26, 26, 0.5);
+    }
+
+    /* Ajuste dos botões de navegação */
+    .arrowSenai {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        background-color: rgba(46, 46, 46, 0.8);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .arrowSenai:first-child {
+        left: 10px;
+    }
+
+    .arrowSenai:last-child {
+        right: 10px;
+    }
+
+    .setasvg {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 /* Pagina */
@@ -27,7 +134,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    max-height: 80px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -35,6 +142,189 @@ header {
     padding: 0 20px;
     background-color: #2E2E2E;
     box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+        height: 50px;
+        position: fixed;
+    }
+
+    header .logo {
+        margin: 0;
+    }
+
+    header .logo img {
+        height: 25px;
+    }
+
+    /* Esconder navegação por padrão */
+    header nav {
+        display: none;
+    }
+
+    /* Hero section mobile */
+    .hero {
+        margin-top: 60px;
+    }
+
+    /* Sobre mim mobile */
+    .sobre-mim {
+        padding: 20px;
+    }
+
+    .sobre-mim h2 {
+        font-size: 24px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .sobre-mim p {
+        font-size: 16px;
+        padding-left: 0;
+        color: #CFCFCF;
+    }
+
+    .skills {
+        padding-left: 0;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    /* Projetos mobile */
+    .title-container {
+        padding-left: 20px;
+    }
+
+    .title-container h2 {
+        font-size: 24px;
+    }
+
+    .Meus-projetos {
+        padding: 0;
+    }
+
+    /* Card de projeto mobile */
+    .robotic-search {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .titulo-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .titulo-info h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Slider mobile */
+    .slider {
+        background: none;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .arrowSenai {
+        width: 30px;
+    }
+
+    /* Outros projetos mobile */
+    .Outros {
+        background-image: url('/imagens/backgroundMobile.png');
+    }
+
+    .project {
+        width: 282px; /* Mantém a largura fixa para mobile */
+        height: 420px; /* Aumenta a altura para acomodar todo o conteúdo */
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+
+    .project img {
+        width: 100%;
+        height: 149px;
+        object-fit: cover;
+    }
+
+    /* Ajustes do conteúdo dentro do card */
+    .project-description {
+        padding: 15px;
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .project-description h3 {
+        font-size: 16px;
+        padding-bottom: 8px;
+    }
+
+    .project-description p {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .button-wrapper {
+        margin-top: auto; /* Empurra o botão para baixo */
+        margin-bottom: 15px;
+        padding: 0 15px;
+    }
+
+    .view-prototype {
+        font-size: 14px;
+        padding: 8px 16px;
+        width: 100%;
+    }
+
+    /* Contato mobile */
+    .contato-section {
+        padding: 20px;
+        background-size: cover;
+    }
+
+    .contato-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .contact-item img {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .contact-item p {
+        font-size: 12px;
+    }
+
+    /* Footer mobile */
+    footer {
+        padding: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
 }
 
 header .logo {
@@ -76,15 +366,6 @@ header nav a:hover {
 
 /* Header */
 
-/* Body */
-
-.name {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700; /* Bold */
-    font-size: 64px;
-    margin: 0;
-    line-height: 1; /* Reduz a altura da linha para aproximar o texto abaixo */
-}
 
 .title {
     font-family: 'Open Sans', sans-serif;
@@ -97,56 +378,28 @@ header nav a:hover {
 
 .hero {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    color: white;
-    min-height: 60vh;
-    background-image: url('/imagens/Thierry.png');
-    background-size: 100%; /* Ajusta a imagem de fundo para cobrir a área */
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-top: 80px;
-    position: initial;
-}
-
-.hero .content {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 60%;
-    right: 0px;
     align-items: center;
-    justify-content: center;
-    position: relative; 
-    padding-bottom: 80px;
-    
+    width: 100%; /* Ocupa 100% da largura da tela */
+    overflow: hidden; /* Evita barras de rolagem */
+    margin-top: 50px;
 }
 
-.hero .social-icons {
-    display: flex;
-    gap: 40px;
-    position: relative;
-    right: -430px;
-    transform: translateY(-135%);
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 60px;
+    }
 }
 
-.social-icons a {
-    font-size: 3.8rem;
-    background: transparent;
-    width: 5rem;
-    height: 3.5rem;
-    display: inline-flex;
-    outline: none;
-    box-sizing: border-box;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
+.hero img {
+    width: 100%; /* Ajusta a largura para não ultrapassar a tela */
+    height: 100%; /* Mantém a altura proporcional */
+    object-fit: cover; /* Cobre toda a área sem distorcer */
 }
 
-.social-icons img {
-    width: 70px;
-}
+
+
+
 
 .btn {
     display: inline-block;
@@ -181,7 +434,8 @@ header nav a:hover {
     color: white;
     text-align: left;
     padding-top: 50px;
-    
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* Define o estilo para o título "Sobre Mim" */
@@ -200,6 +454,32 @@ header nav a:hover {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .sobre-mim h2 {
+        font-size: 24px;
+        padding-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .sobre-mim p {
+        font-size: 16px;
+        padding-left: 0;
+        color: #CFCFCF;
+    }
+
+    .skills {
+        padding-left: 0;
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .sobre-mim {
+        padding: 20px;
+    }
+}
+
 /* Define o estilo para os parágrafos dentro da seção "Sobre Mim" */
 .sobre-mim p {
     font-family: 'Open Sans', sans-serif;
@@ -214,7 +494,7 @@ header nav a:hover {
 /* Define o estilo para as habilidades */
 .skills {
     display: flex;
-    width: 772px;
+    max-width: 772px;
     height: 100px;
     padding: 25px 0px;
     justify-content: space-between;
@@ -253,8 +533,8 @@ header nav a:hover {
 
 .title-container {
     text-align: left;
-    padding-left: 167px; /* Espaçamento igual ao padding-left da seção "Sobre Mim" */
-    margin-bottom: 40px; /* Espaçamento inferior semelhante ao do título "Sobre Mim" */
+    padding-left: 10%;
+    margin-bottom: 40px;
 }
 
 .Meus-projetos {
@@ -278,9 +558,6 @@ header nav a:hover {
     font-family: 'Montserrat', sans-serif;
 }
 
-.sobre-mim {
-    padding-left: 120px;
-}
 
 /* Robotic Search Section */
 
@@ -308,8 +585,8 @@ header nav a:hover {
     background-color: transparent;
     color: white;
     text-align: left;
-    padding-left: 167px;
-    padding-right: 167px;
+    padding-left: 10%;
+    padding-right: 10%;
     margin-top: 0;
     margin-bottom: 100px;
     flex-direction: column;
@@ -700,14 +977,35 @@ hr {
 
 .slider{
     width: 100%;
-    height: 600px;
+    padding: 0 20px;
+    max-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 20px;
     min-height: 80vh;
     background: var(--novo, linear-gradient(180deg, #303030 0%, rgba(30, 30, 30, 0.00) 100%));
+}
 
+@media (max-width: 768px) {
+    .slider {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container-images {
+        width: 100%;
+    }
+
+    .imagensSenai {
+        width: 100%;
+        height: auto;
+    }
+
+    .robotic-search {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 .container-images{
@@ -889,8 +1187,8 @@ hr {
 .Outros{
     display: flex;
     width: 100%;
-    height: 900px;
-    padding: 0px 0px;
+    max-height: 900px;
+    padding: 20px;
     flex-direction: column;
     align-items: center;
     background-image: url('/imagens/Outros.png');
@@ -925,7 +1223,7 @@ hr {
       
       .project {
         background-color: #ffffff;
-        width: 488px; /* Ajuste a largura para garantir que dois containers caibam lado a lado */
+        max-width: 488px; /* Ajuste a largura para garantir que dois containers caibam lado a lado */
         height: 589px;
         align-items: center;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -981,7 +1279,7 @@ hr {
       .view-prototype {
         display: flex;
         margin: 0px;
-        width: 300px;
+        max-width: 300px;
         padding: 12px 20px;
         background-color: #ff6600;
         color: #ffffff;
@@ -1068,7 +1366,24 @@ hr {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    justify-items: center;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .contato-section h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact-item {
@@ -1183,4 +1498,189 @@ footer {
 
 .contact-item a {
     text-decoration: none; /* Remove sublinhado azul */
+}
+
+/* Adicionar menu hamburger */
+.menu-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-hamburger {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-hamburger::before,
+    .menu-hamburger::after,
+    .menu-hamburger span {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #FF6F00;
+        position: absolute;
+        left: 0;
+    }
+
+    .menu-hamburger::before {
+        top: 0;
+    }
+
+    .menu-hamburger span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-hamburger::after {
+        bottom: 0;
+    }
+
+    /* Ajustes gerais de texto */
+    h2 {
+        font-size: 20px !important;
+    }
+
+    p {
+        font-size: 14px !important;
+        line-height: 1.4;
+    }
+
+    /* Botões */
+    .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Skills */
+    .skills img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #kotlinImg {
+        width: 60px;
+    }
+
+    /* Projetos */
+    .robotic-search h2 {
+        font-size: 18px !important;
+    }
+
+    .problemaRobotic,
+    .pesquisaRobotic,
+    .resultadoRobotic,
+    .problemaMage,
+    .pesquisaMage,
+    .resultadoMage,
+    .problemaSenai,
+    .pesquisaSenai,
+    .resultadoSenai {
+        font-size: 16px;
+    }
+
+    /* Cards de projeto */
+    .project-description h3 {
+        font-size: 18px;
+    }
+
+    .project-description p {
+        font-size: 14px;
+    }
+
+    .view-prototype {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    /* Contato */
+    .contact-item img {
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .contact-item p {
+        font-size: 12px;
+    }
+
+    /* Footer */
+    .footer-content {
+        padding: 15px;
+    }
+
+    .footer-content .copyright-text {
+        font-size: 12px;
+    }
+
+    .footer-logo img {
+        width: 30px;
+    }
+
+    /* Info tooltip */
+    .info-tooltip {
+        width: 200px;
+    }
+
+    .info-tooltip p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para a seção Outros em mobile */
+    .Outros {
+        background-image: url('/imagens/OutroBackgroundMobile.png');
+        padding: 20px;
+        max-height: none;
+    }
+
+    .meioOutros {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .project {
+        width: min(calc(100% - 40px), 350px); /* Largura flexível com mínimo implícito */
+        min-width: 282px; /* Largura mínima */
+        height: 420px;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    .project img {
+        width: 100%;
+        height: 149px;
+        object-fit: cover;
+    }
+
+    /* Ajustes do conteúdo dentro do card */
+    .project-description {
+        padding: 15px;
+        margin: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .button-wrapper {
+        margin-top: auto;
+        margin-bottom: 15px;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .view-prototype {
+        width: 100%;
+        max-width: none;
+    }
 }
