@@ -299,3 +299,37 @@ resultadoSenai.addEventListener('click', function() {
     
   }
 });
+
+function setupMobileSkillsCarousel() {
+    const skillsContainers = document.querySelectorAll('.skills');
+    
+    skillsContainers.forEach(container => {
+        if (window.innerWidth <= 768) {
+            // Clone os itens uma vez
+            const items = container.querySelectorAll('img');
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                container.appendChild(clone);
+            });
+
+            // Desabilita interações
+            container.style.pointerEvents = 'none';
+            
+            // Função para scroll contínuo
+            function continuousScroll() {
+                container.scrollLeft += 1;
+                
+                if (container.scrollLeft >= container.scrollWidth / 2) {
+                    container.scrollLeft = 0;
+                }
+                
+                requestAnimationFrame(continuousScroll);
+            }
+
+            continuousScroll();
+        }
+    });
+}
+
+window.addEventListener('load', setupMobileSkillsCarousel);
+window.addEventListener('resize', setupMobileSkillsCarousel);

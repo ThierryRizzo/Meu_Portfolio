@@ -15,7 +15,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #181818;
     color: white;
-    background-image: url('/imagens/Background-img.png');
+    background-image: url('/imagens/Background-imgs.png');
     background-size: cover;
     background-position: center -50px;
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ body {
     align-items: center;
     gap: 20px;
     position: relative;
-    overflow: hidden; /* Evita imagens saindo da div */
+    overflow: hidden; 
     background: var(--novo, linear-gradient(180deg, #303030 0%, rgba(30, 30, 30, 0.00) 100%));
 }
 
@@ -519,6 +519,7 @@ hr {
     max-height: 0;
     overflow: hidden; 
     transition: opacity 1s ease-in-out, max-height 1s ease-in-out; 
+    margin-top: 12px;
 }
 
 
@@ -558,6 +559,7 @@ hr {
     max-height: 0;
     overflow: hidden; 
     transition: opacity 1s ease-in-out, max-height 1s ease-in-out; 
+    margin-top: 12px;
 }
 
 
@@ -647,6 +649,7 @@ hr {
     max-height: 0;
     overflow: hidden; /* Esconde o conteúdo que ultrapassa o max-height */
     transition: opacity 1s ease-in-out, max-height 1s ease-in-out; /* Transição suave de 1 segundo para opacidade e max-height */
+    margin-top: 12px;
 }
 
 /* Estado dos containers quando devem ser visíveis */
@@ -689,6 +692,7 @@ hr {
     max-height: 0;
     overflow: hidden; /* Esconde o conteúdo que ultrapassa o max-height */
     transition: opacity 1s ease-in-out, max-height 1s ease-in-out; /* Transição suave de 1 segundo para opacidade e max-height */
+    margin-top: 12px;
 }
 
 /* Estado dos containers quando devem ser visíveis */
@@ -804,6 +808,7 @@ hr {
     max-height: 0;
     overflow: hidden; /* Esconde o conteúdo que ultrapassa o max-height */
     transition: opacity 1s ease-in-out, max-height 1s ease-in-out; /* Transição suave de 1 segundo para opacidade e max-height */
+    margin-top: 12px;
 }
 
 /* Estado dos containers quando devem ser visíveis */
@@ -846,6 +851,7 @@ hr {
     max-height: 0;
     overflow: hidden; /* Esconde o conteúdo que ultrapassa o max-height */
     transition: opacity 1s ease-in-out, max-height 1s ease-in-out; /* Transição suave de 1 segundo para opacidade e max-height */
+    margin-top: 12px;
 }
 
 /* Estado dos containers quando devem ser visíveis */
@@ -914,7 +920,6 @@ hr {
 
 .tituloOutros{
     padding-top: 80px;
-    
     
 }
 
@@ -1216,6 +1221,146 @@ footer {
 /* 11. Media Queries - Todas juntas */
 @media (max-width: 768px) {
 
+    .btn-text {
+        font-size: 16px;
+        margin-right: 15px; 
+        /* Espaçamento entre o texto e a seta */
+        
+      }
+
+
+    .hidden-problema-robotic h3 {
+        font-size: 14px;
+        color: #eeeeee;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-problema-robotic p {
+        font-size: 10px;
+
+    }
+
+    .hidden-pesquisa-robotic h3 {
+        font-size: 14px;
+        color: #eeeeee;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-pesquisa-robotic p {
+        font-size: 10px;
+
+    }
+
+    .hidden-resultado-robotic h3 {
+        font-size: 14px;
+        color: #eeeeee;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-resultado-robotic p {
+        font-size: 10px;
+
+    }
+
+
+
+
+
+
+    .hidden-problema-Mage h3 {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #eeeeee;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-problema-Mage p {
+        font-size: 10px;
+
+    }
+
+    .hidden-pesquisa-Mage h3 {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #eeeeee;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-pesquisa-Mage p {
+        font-size: 10px;
+
+    }
+
+    .hidden-resultado-Mage h3 {
+        font-size: 14px;
+        color: #eeeeee;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-resultado-Mage p {
+        font-size: 10px;
+
+    }
+
+    
+
+
+
+
+    .hidden-problema-Senai h3 {
+        font-size: 14px;
+        color: #eeeeee;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-problema-Senai p {
+        font-size: 10px;
+
+    }
+
+    .hidden-pesquisa-Senai h3 {
+        font-size: 14px;
+        color: #eeeeee;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-pesquisa-Senai p {
+        font-size: 10px;
+
+    }
+
+    .hidden-resultado-Senai h3 {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #eeeeee;
+        margin-bottom: 10px;
+
+    }
+
+    .hidden-resultado-Senai p {
+        font-size: 10px;
+
+    }
+
+
+
+
+
+
 
     .titulo-info hr{
         
@@ -1223,7 +1368,7 @@ footer {
     }
 
     body {
-        background-image: url('/imagens/backgroundMobile.png');
+        background-image: url('#');
         background-position: top center;
         background-size: 100% auto;
     }
@@ -1339,24 +1484,32 @@ footer {
     }
 
     .skills {
-        padding-left: 0;
-        justify-content: flex-start;
-        gap: 20px;
+        display: flex;
+        padding: 0;
+        gap: 50px;
         overflow-x: auto;
-        padding-bottom: 10px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: none;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        pointer-events: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
     }
 
-    .titulo-info .skills {
-        padding-left: 0;
-        justify-content: flex-start;
-        gap: 20px;
-        overflow-x: auto;
-        padding-bottom: 10px;
+
+    .skills::-webkit-scrollbar {
+        display: none;
     }
 
-    .titulo-info .skills img {
-        width: 25px;
-        height: 25px;
+    .skills img {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
     }
 
     /* Projetos mobile */
@@ -1373,10 +1526,7 @@ footer {
     }
 
     /* Card de projeto mobile */
-    .robotic-search {
-        padding: 20px;
-        gap: 30px;
-    }
+
 
     .titulo-info {
         flex-direction: column;
@@ -1435,7 +1585,7 @@ footer {
     }
 
     .project-description p {
-        font-size: 12px;
+        font-size: 10px;
         line-height: 1.4;
         margin-bottom: 10px;
     }
@@ -1459,8 +1609,14 @@ footer {
     }
 
     .contato-grid {
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         gap: 20px;
+    }
+
+    .contato-grid p {
+        font-size: 10px;
     }
 
     .contact-item img {
@@ -1469,9 +1625,7 @@ footer {
         padding: 8px;
     }
 
-    .contact-item p {
-        font-size: 12px;
-    }
+
 
     /* Footer mobile */
     footer {
@@ -1479,7 +1633,7 @@ footer {
     }
 
     .footer-content {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 20px;
         text-align: center;
@@ -1508,22 +1662,16 @@ footer {
     .robotic-search {
         padding-left: 5%;
         padding-right: 5%;
+        margin-bottom: 70px;
     }
 
-    .contato-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
+ 
 
     .contato-section h2 {
         font-size: 36px;
     }
     /* Estilos globais mobile */
-    body {
-        background-image: url('/imagens/backgroundMobile.png');
-        background-position: top center;
-        background-size: 100% auto;
-    }
+
 
     .paiDeTodos {
         width: 100%;
@@ -1601,16 +1749,6 @@ footer {
         object-fit: cover;
     }
 
-    /* Ajustes do conteúdo dentro do card */
-    .project-description {
-        padding: 15px;
-        margin: 0;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1;
-    }
 
     .button-wrapper {
         margin-top: auto;
@@ -1695,14 +1833,6 @@ footer {
         font-size: 12px;
     }
 
-    /* Cards de projeto */
-    .project-description h3 {
-        font-size: 18px;
-    }
-
-    .project-description p {
-        font-size: 14px;
-    }
 
     .view-prototype {
         font-size: 14px;
@@ -1723,10 +1853,12 @@ footer {
     /* Footer */
     .footer-content {
         padding: 15px;
+        width: 100%;
     }
 
     .footer-content .copyright-text {
         font-size: 10px;
+        
     }
 
     .footer-logo img {
@@ -1781,6 +1913,12 @@ footer {
     .setasvg {
         width: 20px;
         height: 20px;
+    }
+
+    .tituloOutros{
+        padding-top: 40px;
+        padding-bottom: 20px;
+        
     }
 }
 
