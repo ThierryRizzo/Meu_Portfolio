@@ -1865,13 +1865,29 @@ footer {
         width: 30px;
     }
 
-    /* Info tooltip */
     .info-tooltip {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
         width: 200px;
+        background-color: #2E2E2E;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        z-index: 1000;
+    }
+
+    .info-tooltip::after {
+        display: none;
     }
 
     .info-tooltip p {
         font-size: 12px;
+        margin: 5px 0;
+        text-align: left;
+        white-space: normal;
+        line-height: 1.4;
     }
     
     .container-images {
